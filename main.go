@@ -78,7 +78,7 @@ func main() {
 	defer mongoclient.Disconnect(ctx)
 
 	corsConfig := cors.DefaultConfig()
-	corsConfig.AllowOrigins = []string{"https://localhost:8888", "http://localhost:3000"}
+	corsConfig.AllowOrigins = []string{"https://localhost:8888", "http://localhost:3000", "https://try-jwt.herokuapp.com/"}
 	corsConfig.AllowCredentials = true
 
 	server.Use(cors.New(corsConfig))
